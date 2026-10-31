@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>PulseVanilla | Minecraft Server</title>
-
-<meta name="description" content="Welcome to PulseVanilla Minecraft Server!">
+<meta name="description" content="Welcome to PulseVanilla Minecraft Server">
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -20,23 +17,20 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #08040e;
+    background: #08050e;
     color: white;
     overflow-x: hidden;
 }
-
-/* BACKGROUND */
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -2;
-
+    z-index: -1;
     background:
-    radial-gradient(circle at 15% 20%, #8500ff55, transparent 40%),
-    radial-gradient(circle at 85% 60%, #5700b955, transparent 40%),
-    linear-gradient(135deg, #08040e, #160622, #08040e);
+        radial-gradient(circle at 15% 20%, #8b00ff55, transparent 40%),
+        radial-gradient(circle at 85% 70%, #6500ff44, transparent 40%),
+        linear-gradient(135deg, #08040e, #180725, #08040e);
 }
 
 /* NAVBAR */
@@ -44,70 +38,60 @@ body::before {
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
-
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 22px 7%;
-
-    background: rgba(8,4,14,0.9);
+    background: rgba(8,4,14,.95);
     backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid #8c00ff55;
+    border-bottom: 1px solid #9000ff66;
 }
 
 .logo {
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 900;
     color: #c05aff;
-    text-shadow: 0 0 20px #9b00ff;
+    text-shadow: 0 0 20px #9500ff;
 }
 
 nav {
     display: flex;
-    gap: 30px;
-    align-items: center;
+    gap: 28px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 nav a:hover {
-    color: #c05aff;
-    text-shadow: 0 0 15px #a000ff;
+    color: #c45aff;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 650px;
-
+    min-height: 680px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     padding: 100px 20px;
 }
 
 .welcome {
-    color: #d5aaff;
+    color: #d4a0ff;
     letter-spacing: 8px;
-    font-size: 17px;
     margin-bottom: 20px;
 }
 
 .hero h1 {
     font-size: clamp(48px, 9vw, 95px);
-    font-weight: 1000;
-
+    font-weight: 900;
     text-shadow: 0 0 35px #9500ff;
 }
 
@@ -116,59 +100,47 @@ nav a:hover {
 }
 
 .tagline {
-    margin-top: 20px;
+    margin-top: 22px;
     color: #cbb6df;
     letter-spacing: 5px;
-    font-size: 17px;
 }
 
-/* IP BOX */
+/* SERVER IP */
 
 .ip-box {
     display: flex;
     align-items: center;
-
     margin-top: 45px;
-
+    background: #160923;
     border: 2px solid #a000ff;
-    border-radius: 14px;
-
-    background: #13091e;
-
-    box-shadow: 0 0 30px #8500ff55;
-
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 0 30px #8500ff55;
 }
 
 .ip {
-    padding: 20px 35px;
+    padding: 20px 30px;
     font-size: 23px;
     font-weight: bold;
 }
 
 .copy-btn {
     height: 100%;
-    padding: 20px 27px;
-
+    padding: 20px 25px;
     background: #9500ff;
     border: none;
-
     color: white;
-    font-size: 23px;
-
+    font-size: 22px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .copy-btn:hover {
     background: #bd4aff;
-    box-shadow: 0 0 25px #a000ff;
 }
 
 #copyMessage {
-    margin-top: 15px;
-    color: #d08aff;
-    font-size: 14px;
+    margin-top: 14px;
+    color: #ce91ff;
 }
 
 /* BUTTONS */
@@ -179,18 +151,14 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-
     padding: 15px 32px;
     margin: 8px;
-
     border: 1px solid #a000ff;
     border-radius: 9px;
-
     color: white;
     text-decoration: none;
     font-weight: bold;
-
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .btn:hover {
@@ -216,10 +184,9 @@ section {
 .subtitle {
     color: #aaa;
     margin-bottom: 50px;
-    font-size: 17px;
 }
 
-/* MEDIA RANK CARDS */
+/* MEDIA RANK */
 
 .media-container {
     display: grid;
@@ -229,17 +196,12 @@ section {
 
 .card {
     background: linear-gradient(145deg, #1b0c29, #0c0712);
-
     border: 1px solid #9500ff;
     border-radius: 16px;
-
     padding: 35px 25px;
-
     text-align: left;
-
     box-shadow: 0 0 20px #7500ff22;
-
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .card:hover {
@@ -271,12 +233,9 @@ section {
 
 footer {
     padding: 35px 20px;
-
     text-align: center;
-
     background: #09050f;
     border-top: 1px solid #8c00ff55;
-
     color: #888;
 }
 
@@ -287,7 +246,6 @@ footer span {
 /* MOBILE */
 
 @media(max-width: 850px) {
-
     header {
         flex-direction: column;
         gap: 22px;
@@ -325,248 +283,129 @@ footer span {
         font-size: 32px;
     }
 }
-
 </style>
+
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <header>
+    <div class="logo">⚡ PulseVanilla</div>
 
-    <div class="logo">
-        ⚡ PulseVanilla
-    </div>
-
-    <nav>
-
-        <a href="#server">Server Info</a>
-
-        <a href="#media">Media Rank</a>
-
-        <a href="https://discord.gg/pulsevanilla"
-        target="_blank">Discord</a>
-
-        <a href="https://pulsevanillaeu.craftingstore.net/category/561584"
-        target="_blank">Store</a>
-
-    </nav>
+```
+<nav>
+    <a href="#server">Server Info</a>
+    <a href="#media">Media Rank</a>
+    <a href="https://discord.gg/pulsevanilla" target="_blank">Discord</a>
+    <a href="https://pulsevanillaeu.craftingstore.net/category/561584" target="_blank">Store</a>
+</nav>
+```
 
 </header>
 
-
-<!-- HOME -->
+<!-- SERVER INFO -->
 
 <div class="hero" id="server">
 
-    <div class="welcome">
-        WELCOME TO
-    </div>
+```
+<div class="welcome">WELCOME TO</div>
 
-    <h1>
-        Pulse<span>Vanilla</span>
-    </h1>
+<h1>Pulse<span>Vanilla</span></h1>
 
-    <div class="tagline">
-        SURVIVAL • COMMUNITY • FUN
-    </div>
-
-
-    <!-- SERVER IP -->
-
-    <div class="ip-box">
-
-        <div class="ip">
-            PulseVanilla.eu
-        </div>
-
-        <button class="copy-btn"
-        onclick="copyIP()"
-        title="Copy Server IP">
-
-            ▢
-
-        </button>
-
-    </div>
-
-    <div id="copyMessage"></div>
-
-
-    <!-- BUTTONS -->
-
-    <div class="buttons">
-
-        <a class="btn"
-        href="https://discord.gg/pulsevanilla"
-        target="_blank">
-
-            Discord
-
-        </a>
-
-        <a class="btn"
-        href="https://pulsevanillaeu.craftingstore.net/category/561584"
-        target="_blank">
-
-            Store
-
-        </a>
-
-    </div>
-
+<div class="tagline">
+    SURVIVAL • COMMUNITY • FUN
 </div>
 
+<div class="ip-box">
+    <div class="ip">PulseVanilla.eu</div>
+
+    <button class="copy-btn" onclick="copyIP()" title="Copy IP">
+        ▢
+    </button>
+</div>
+
+<div id="copyMessage"></div>
+
+<div class="buttons">
+    <a class="btn" href="https://discord.gg/pulsevanilla" target="_blank">
+        Discord
+    </a>
+
+    <a class="btn" href="https://pulsevanillaeu.craftingstore.net/category/561584" target="_blank">
+        Store
+    </a>
+</div>
+```
+
+</div>
 
 <!-- MEDIA RANK -->
 
 <section id="media">
 
-    <h2 class="section-title">
-        ★ MEDIA RANK
-    </h2>
+```
+<h2 class="section-title">★ MEDIA RANK</h2>
 
-    <p class="subtitle">
-        Create content about PulseVanilla and earn your Media Rank!
-    </p>
+<p class="subtitle">
+    Show us your content and get the Media Rank!
+</p>
 
+<div class="media-container">
 
-    <div class="media-container">
-
-
-        <!-- TWITCH -->
-
-        <div class="card">
-
-            <h3>🟣 Twitch</h3>
-
-            <ul>
-
-                <li>
-                    Stream at least twice per week.
-                </li>
-
-                <li>
-                    Maintain an average of 5+ viewers.
-                </li>
-
-                <li>
-                    The server IP must be visible on stream.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- TIKTOK -->
-
-        <div class="card">
-
-            <h3>🎵 TikTok</h3>
-
-            <ul>
-
-                <li>
-                    Publish a TikTok video that receives more than 500 views.
-                </li>
-
-                <li>
-                    The server IP must be clearly visible on screen.
-                </li>
-
-                <li>
-                    Stream at least twice per week.
-                </li>
-
-                <li>
-                    Maintain an average of 5+ viewers.
-                </li>
-
-                <li>
-                    The server IP must be visible on stream.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- YOUTUBE -->
-
-        <div class="card">
-
-            <h3>▶ YouTube</h3>
-
-            <ul>
-
-                <li>
-                    Upload a YouTube video that achieves over 500 views.
-                </li>
-
-                <li>
-                    The server IP must be clearly visible on screen.
-                </li>
-
-                <li>
-                    Stream at least twice per week.
-                </li>
-
-                <li>
-                    Maintain an average of 5+ viewers.
-                </li>
-
-                <li>
-                    The server IP must be visible on stream.
-                </li>
-
-            </ul>
-
-        </div>
-
-
+    <div class="card">
+        <h3>🟣 Twitch</h3>
+        <ul>
+            <li>Stream at least twice per week.</li>
+            <li>Maintain an average of 5+ viewers.</li>
+            <li>The server IP must be visible on stream.</li>
+        </ul>
     </div>
+
+    <div class="card">
+        <h3>🎵 TikTok</h3>
+        <ul>
+            <li>Publish a TikTok video that receives more than 500 views.</li>
+            <li>The server IP must be clearly visible on screen.</li>
+            <li>Stream at least twice per week.</li>
+            <li>Maintain an average of 5+ viewers.</li>
+            <li>The server IP must be visible on stream.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>▶ YouTube</h3>
+        <ul>
+            <li>Upload a YouTube video that achieves over 500 views.</li>
+            <li>The server IP must be clearly visible on screen.</li>
+            <li>Stream at least twice per week.</li>
+            <li>Maintain an average of 5+ viewers.</li>
+            <li>The server IP must be visible on stream.</li>
+        </ul>
+    </div>
+
+</div>
+```
 
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-    © 2026 <span>PulseVanilla</span>.
-    All rights reserved.
-
+    © 2026 <span>PulseVanilla</span>. All rights reserved.
 </footer>
 
-
-<!-- COPY IP SCRIPT -->
-
 <script>
-
 function copyIP() {
-
     const ip = "PulseVanilla.eu";
 
     navigator.clipboard.writeText(ip)
-
     .then(() => {
-
         document.getElementById("copyMessage").innerText =
         "✓ Server IP copied successfully!";
-
     })
-
     .catch(() => {
-
         document.getElementById("copyMessage").innerText =
         "Copy failed. IP: " + ip;
-
     });
-
 }
-
 </script>
 
 </body>
