@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PulseVanilla | Minecraft Server</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #08050e;
+    color: white;
+}
+
+/* BACKGROUND */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, #6500a755, transparent 40%),
+        radial-gradient(circle at 80% 60%, #8500ff33, transparent 40%),
+        linear-gradient(135deg, #08050e, #150825, #08050e);
+    z-index: -1;
+}
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #09050eee;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #8b00ff55;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #b84aff;
+    text-shadow: 0 0 15px #9b00ff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c44dff;
+    text-shadow: 0 0 10px #a000ff;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 130px 20px 100px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 25px #9900ff;
+}
+
+.hero h1 span {
+    color: #b52cff;
+}
+
+.hero p {
+    margin-top: 20px;
+    color: #c4b3d5;
+    font-size: 19px;
+    letter-spacing: 3px;
+}
+
+/* IP */
+
+.ip-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0;
+    max-width: 520px;
+    border: 2px solid #a000ff;
+    border-radius: 14px;
+    background: #150923;
+    box-shadow: 0 0 25px #8a00ff55;
+    overflow: hidden;
+}
+
+.ip {
+    padding: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.copy-btn {
+    background: #9500ff;
+    border: none;
+    color: white;
+    padding: 20px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: #bd4aff;
+}
+
+/* BUTTONS */
+
+.buttons {
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 8px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #a000ff;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #9500ff;
+    box-shadow: 0 0 20px #9500ff;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #c04aff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #9500ff;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+/* MEDIA CARDS */
+
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #130b1d;
+    border: 1px solid #9500ff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 0 20px #7500ff22;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 25px #9500ff66;
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #c65aff;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    color: #ddd;
+    margin-bottom: 13px;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #09050e;
+    border-top: 1px solid #8b00ff55;
+    color: #888;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .media-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚡ PulseVanilla</div>
+
+    <nav>
+        <a href="#server">Server Info</a>
+        <a href="#media">Media Role</a>
+        <a href="https://discord.gg/pulsevanilla" target="_blank">Discord</a>
+        <a href="https://pulsevanillaeu.craftingstore.net/category/561584" target="_blank">Store</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<div class="hero" id="server">
+
+    <p>WELCOME TO</p>
+
+    <h1>Pulse<span>Vanilla</span></h1>
+
+    <p>SURVIVAL • COMMUNITY • FUN</p>
+
+    <div class="ip-box">
+        <div class="ip" id="serverIP">PulseVanilla.eu</div>
+
+        <button class="copy-btn" onclick="copyIP()" title="Copy IP">
+            ▢
+        </button>
+    </div>
+
+    <div id="copyMessage" style="color:#c65aff;margin-top:12px;"></div>
+
+    <div class="buttons">
+        <a class="btn" href="https://discord.gg/pulsevanilla" target="_blank">
+            Discord
+        </a>
+
+        <a class="btn" href="https://pulsevanillaeu.craftingstore.net/category/561584" target="_blank">
+            Store
+        </a>
+    </div>
+
+</div>
+
+<!-- MEDIA ROLE -->
+
+<section id="media">
+
+    <h2 class="section-title">★ MEDIA ROLE</h2>
+
+    <p class="subtitle">
+        Show us your content and get the Media role!
+    </p>
+
+    <div class="media-container">
+
+        <!-- TWITCH -->
+
+        <div class="card">
+            <h3>🟣 Twitch</h3>
+
+            <ul>
+                <li>Stream at least twice per week.</li>
+                <li>Maintain an average of 5+ viewers.</li>
+                <li>The server IP must be visible on stream.</li>
+            </ul>
+        </div>
+
+        <!-- TIKTOK -->
+
+        <div class="card">
+            <h3>🎵 TikTok</h3>
+
+            <ul>
+                <li>Publish a TikTok video that receives more than 500 views.</li>
+                <li>The server IP must be clearly visible on screen.</li>
+                <li>Stream at least twice per week.</li>
+                <li>Maintain an average of 5+ viewers.</li>
+                <li>The server IP must be visible on stream.</li>
+            </ul>
+        </div>
+
+        <!-- YOUTUBE -->
+
+        <div class="card">
+            <h3>▶ YouTube</h3>
+
+            <ul>
+                <li>Upload a YouTube video that achieves over 500 views.</li>
+                <li>The server IP must be clearly visible on screen.</li>
+                <li>Stream at least twice per week.</li>
+                <li>Maintain an average of 5+ viewers.</li>
+                <li>The server IP must be visible on stream.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 PulseVanilla. All rights reserved.
+</footer>
+
+<script>
+function copyIP() {
+    const ip = "PulseVanilla.eu";
+
+    navigator.clipboard.writeText(ip).then(() => {
+        document.getElementById("copyMessage").innerText =
+            "✓ Server IP copied!";
+    }).catch(() => {
+        document.getElementById("copyMessage").innerText =
+            "Copy failed. IP: " + ip;
+    });
+}
+</script>
+
+</body>
+</html>
